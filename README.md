@@ -1,6 +1,8 @@
 # 옛날 Vim스타일 snippets은 여기에 정리중(updating~~)
 - https://github.com/YoungHaKim7/UltiSnips
 
+<hr>
+
 # 최종 NeoVim Setting(Tabby + zig+ C LSP + 완벽 세팅)
 - https://github.com/YoungHaKim7/rust_dev_neovide_nvimsetting
 
