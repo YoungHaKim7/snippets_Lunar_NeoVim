@@ -3,7 +3,7 @@
 
 <hr>
 
-# 최종 NeoVim Setting(Tabby + zig+ C LSP + 완벽 세팅)
+# 최종 NeoVim Setting(Tabby + Rust + zig+ C/C++ LSP + 완벽 세팅)
 - https://github.com/YoungHaKim7/rust_dev_neovide_nvimsetting
 
 <hr>
