@@ -26,15 +26,6 @@
 
 ```
 
-
-# 최종 NeoVim Setting(Tabby + Rust + zig+ C/C++ LSP + 완벽 세팅)
-- https://github.com/YoungHaKim7/rust_dev_neovide_nvimsetting
-
-<hr>
-
-# snippets_Lunar_NeoVim
-https://github.com/rust10x/rust10x-vscode
-
 # friendly-snippets rust.json 경로
 
 - add plugins 
@@ -50,6 +41,15 @@ $HOME/.local/share/lunarvim/site/pack/lazy/opt/friendly-snippets/snippets/rust/r
 
 ~\AppData\Local\nvim-data\lazy\friendly-snippets\snippets\rust\rust.json
 ```
+
+# 최종 NeoVim Setting(Tabby + Rust + zig+ C/C++ LSP + 완벽 세팅)
+- https://github.com/YoungHaKim7/rust_dev_neovide_nvimsetting
+
+<hr>
+
+# snippets_Lunar_NeoVim
+https://github.com/rust10x/rust10x-vscode
+
 
 # rust.json source 
 
