@@ -3,6 +3,30 @@
 
 <hr>
 
+# RustSnippet기본 위치[[🔝]](#link)
+
+- https://github.com/hrsh7th/vim-vsnip
+
+- 내꺼 정리 https://github.com/YoungHaKim7/rust_vim_setting/tree/main/01_Vim_NeoVim_etc_Rust_settings/snippets_Lunar_NeoVim
+
+- ```:VsnipOpen```
+
+
+- global.json위치(~/.vsnip/global.json)
+- rust.json위치(~/.vsnip/rust.json) 
+
+```
+~/.vsnip                                                                                          at 19:17:08
+❯ tree
+.
+├── global.json
+└── rust.json
+
+0 directories, 2 files
+
+```
+
+
 # 최종 NeoVim Setting(Tabby + Rust + zig+ C/C++ LSP + 완벽 세팅)
 - https://github.com/YoungHaKim7/rust_dev_neovide_nvimsetting
 
