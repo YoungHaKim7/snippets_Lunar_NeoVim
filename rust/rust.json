@@ -1304,7 +1304,7 @@
       "if ${1:variable < 5} {",
       "\tprintln!(\"condition was true\");",
       "} else {",
-      "\tprintln!(\"condition was false\")",
+      "\tprintln!(\"condition was false\");",
       "}"
     ],
     "description": "If else"
