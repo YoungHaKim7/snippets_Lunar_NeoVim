@@ -1297,5 +1297,16 @@
       ""
     ],
     "description": "Rust faster-compilation-parallel"
+  },
+  "10x-if-else ": {
+    "prefix": "10x-if-else",
+    "body": [
+      "if ${1:variable < 5} {",
+      "\tprintln!(\"condition was true\");",
+      "} else {",
+      "\tprintln!(\"condition was false\")",
+      "}"
+    ],
+    "description": "If else"
   }
 }
