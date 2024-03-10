@@ -1243,6 +1243,36 @@
     ],
     "description": "Rust tokio::main Snippets{ … }"
   },
+  "10x-tokio-async-mpsc": {
+    "prefix": "10x-tokio-async-mpsc",
+    "body": [
+      "// region:    --- Message",
+      "enum Message {",
+      "\tTick,",
+      "}",
+      "async fn sender(tx: tokio::sync::mpsc::Sender<Message>) {",
+      "loop {",
+      "\ttx.send(Message::Tick).await.unwrap();",
+      "\ttokio::time::sleep(tokio::time::Duration::from_secs(1)).await;",
+      "\t}",
+      "}",
+      "",
+      "async fn receiver(mut rx: tokio::sync::mpsc::Receiver<Message>) {",
+      "\twhile let Some(message) = rx.recv().await {",
+      "\t\tmatch message {",
+      "\t\t\tMessage::Tick => println!(\"Tick\"),",
+      "\t\t}",
+      "\t}",
+      "}",
+      "#[tokio::main]",
+      "async fn main() {",
+      "\tlet (tx, rx) = tokio::sync::mpsc::channel::<Message>(100);",
+      "\ttokio::spawn(sender(tx));",
+      "\treceiver(rx).await;",
+      "}"
+    ],
+    "description": "Rust tokio (MPSC)::main Snippets{ … }"
+  },
   "10x-setting-up-compilation-quickly": {
     "prefix": "10x-faster-compilation-parallel",
     "body": [
@@ -1267,16 +1297,5 @@
       ""
     ],
     "description": "Rust faster-compilation-parallel"
-  },
-  "10x-if-else ": {
-      "prefix": "10x-if-else",
-      "body": [
-          "if ${1:variable < 5} {",
-              "\tprintln!(\"condition was true\");",
-              "} else {",
-              "\tprintln!(\"condition was false\")",
-              "}"
-      ],
-      "description": "If else"
   }
 }
