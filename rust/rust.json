@@ -1298,6 +1298,26 @@
     ],
     "description": "Rust faster-compilation-parallel"
   },
+  "10x-ok-err-if-let": {
+    "prefix": "10x-ok-err-if-let",
+    "body": [
+      "use std::error::Error;",
+      "fn ${1:example()} -> Result<(), Box<dyn Error>> {",
+      "\tlet mut my_val = vec![];",
+      "",
+      "Ok(())",
+      "}",
+      "",
+      "fn main() {",
+      "\tif let Err(err) = ${1:example()} {",
+      "\t\teprintln!(\"Error: {}\", err);",
+      "\t} else {",
+      "\t\tprintln!(\"data successfully \");",
+      "\t}",
+      "}"
+    ],
+    "description": "if let ok err"
+  },
   "10x-if-else ": {
     "prefix": "10x-if-else",
     "body": [
