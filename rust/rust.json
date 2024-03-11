@@ -1314,6 +1314,19 @@
     ],
     "description": "(1..10).map(|x|x+1).collect::<Vec<i32>>()"
   },
+  "10x-collect-random-num-vec-map": {
+    "prefix": "10x-collect-random-num-vec-map",
+    "body": [
+      "use rand::Rng;",
+      "",
+      "fn main() {",
+      "\tlet mut rng = rand::thread_rng();",
+      "\tlet vals: Vec<u64> = (0..${1:100}).map(|_| rng.gen_range(0..${2:20})).collect();",
+      "dbg!(vals);",
+      "}"
+    ],
+    "description": "(1..10).map(|x|x+1).collect::<Vec<i32>>()"
+  },
   "10x-ok-err-if-let": {
     "prefix": "10x-ok-err-if-let",
     "body": [
