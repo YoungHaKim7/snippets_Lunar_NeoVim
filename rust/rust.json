@@ -1298,6 +1298,22 @@
     ],
     "description": "Rust faster-compilation-parallel"
   },
+  "10x-collect-vec": {
+    "prefix": "10x-collect-vec",
+    "body": [
+      "let mut my_vec = (1..${1:10}).collect::<Vec<i32>>();",
+      "dbg!(my_vec);"
+    ],
+    "description": "(1..10).collect::<Vec<i32>>()"
+  },
+  "10x-collect-vec-map": {
+    "prefix": "10x-collect-vec-map",
+    "body": [
+      "let mut my_vec = (1..${1:10}).map(|x| x + 1).collect::<Vec<i32>>();",
+      "dbg!(my_vec);"
+    ],
+    "description": "(1..10).map(|x|x+1).collect::<Vec<i32>>()"
+  },
   "10x-ok-err-if-let": {
     "prefix": "10x-ok-err-if-let",
     "body": [
