@@ -1302,6 +1302,7 @@
     "prefix": "10x-actixweb-actix01",
     "body": [
       "use actix_web::{middleware, web, App, HttpRequest, HttpServer};",
+      "",
       "async fn index(req: HttpRequest) -> &'static str {",
       "\tprintln!(\"REQ: {req:?}\");",
       "\t\"Hello world! actix\"",
