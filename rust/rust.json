@@ -1410,8 +1410,8 @@
     "body": [
       "fn main() {",
       "\tlet s = \"3.1415a\";",
-      "\tlet num = s.parse::<f64>();",
-      "\tmatch num {",
+      "\tlet ${1:num} = s.parse::<f64>();",
+      "\tmatch ${1:num} {",
       "\t\tOk(result) => println!(\"{:.2}\", result),",
       "\t\tErr(e) => eprintln!(\"Error occurred. Reason: {e}\"),",
       "\t}",
