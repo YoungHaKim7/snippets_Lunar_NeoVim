@@ -1406,7 +1406,7 @@
     "description": "(1..10).map(|x|x+1).collect::<Vec<i32>>()"
   },
   "10x-result-err": {
-    "prefix": "10x-result-let",
+    "prefix": "10x-result-err",
     "body": [
       "fn main() {",
       "\tlet s = \"3.1415a\";",
