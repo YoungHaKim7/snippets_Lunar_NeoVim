@@ -1405,6 +1405,20 @@
     ],
     "description": "(1..10).map(|x|x+1).collect::<Vec<i32>>()"
   },
+  "10x-result-err": {
+    "prefix": "10x-result-let",
+    "body": [
+      "fn main() {",
+      "\tlet s = \"3.1415a\";",
+      "\tlet num = s.parse::<f64>();",
+      "\tmatch num {",
+      "\t\tOk(result) => println!(\"{:.2}\", result),",
+      "\t\tErr(e) => eprintln!(\"Error occurred. Reason: {e}\"),",
+      "\t}",
+      "}"
+    ],
+    "description": "result Ok-err"
+  },
   "10x-ok-err-if-let": {
     "prefix": "10x-ok-err-if-let",
     "body": [
@@ -1436,4 +1450,5 @@
     ],
     "description": "If else"
   }
+
 }
