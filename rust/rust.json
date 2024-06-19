@@ -1284,6 +1284,8 @@
       "[toolchain]",
       "channel = \"nightly\"",
       "components = [\"rustfmt\", \"rust-src\"]",
+      "[target.x86_64-unknown-linux-gnu]",
+      "rustflags = [\"-Zlinker-features=-lld\"]",
       "",
       "// echo  __ input bash  copy & paste",
       "rm -rf .cargo rust-toolchain.toml",
@@ -1294,6 +1296,9 @@
       "",
       "echo \"[build]\" >> .cargo/config.toml",
       "echo \"rustflags = [\"\\\"-Z\\\"\", \"\\\"threads=8\"\\\"]\" >> .cargo/config.toml",
+      "echo \"\" >> .cargo/config.toml",
+      "echo \"[target.x86_64-unknown-linux-gnu]\">> .cargo/config.toml",
+      "echo \"rustflags = [\"\\\"-Zlinker-features=-lld\"\\\"]\">> .cargo/config.toml",
       ""
     ],
     "description": "Rust faster-compilation-parallel"
@@ -1354,25 +1359,25 @@
   "10x-pinning-select-tokio-async": {
     "prefix": "10x-pinning-select-tokio-async",
     "body": [
-    "use tokio::{pin, select};",
-    "",
-    "async fn my_async_fn() {",
-    "\t// async logic here",
-    "\tprintln!(\"my_async_fn logic\");",
-    "}",
-    "",
-    "#[tokio::main]",
-    "async fn main() {",
-    "\tpin! {",
-    "\t\tlet future1 = my_async_fn();",
-    "\t\tlet future2 = my_async_fn();",
-    "\t}",
-    "",
-    "\tselect! {",
-    "\t\t_ = &mut future1 => {}",
-    "\t\t_ = &mut future2 => {}",
-    "\t}",
-    "}"
+      "use tokio::{pin, select};",
+      "",
+      "async fn my_async_fn() {",
+      "\t// async logic here",
+      "\tprintln!(\"my_async_fn logic\");",
+      "}",
+      "",
+      "#[tokio::main]",
+      "async fn main() {",
+      "\tpin! {",
+      "\t\tlet future1 = my_async_fn();",
+      "\t\tlet future2 = my_async_fn();",
+      "\t}",
+      "",
+      "\tselect! {",
+      "\t\t_ = &mut future1 => {}",
+      "\t\t_ = &mut future2 => {}",
+      "\t}",
+      "}"
     ],
     "description": "(1..10).collect::<Vec<i32>>()"
   },
@@ -1449,5 +1454,4 @@
     ],
     "description": "If else"
   }
-
 }
