@@ -1037,7 +1037,7 @@
     "description": "error.rs boostrap code with derive_more::From"
   },
   "10x-iosimple_basic": {
-    "prefix": "10x-io-simple basic",
+    "prefix": "10x-io-simple-basic",
     "body": [
       "use std::io;",
       "fn main() {",
