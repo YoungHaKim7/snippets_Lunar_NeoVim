@@ -1036,6 +1036,24 @@
     ],
     "description": "error.rs boostrap code with derive_more::From"
   },
+  "10x-iosimple_basic": {
+    "prefix": "10x-io-simple basic",
+    "body": [
+      "use std::io;",
+      "fn main() {",
+      "println!(\"Guess the number\");",
+      "",
+      "let mut guess = String::new();",
+      "",
+      "io::stdin()",
+      ".read_line(&mut guess)",
+      ".expect(\"Failed to read line\");",
+      "",
+      "println!(\"You guessed: {}\", guess);",
+      "}"
+    ],
+    "description": "io basic simple"
+  },
   "10x-gitignore-min": {
     "prefix": "10x-gitignore-01-min",
     "body": [
